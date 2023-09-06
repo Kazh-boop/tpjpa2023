@@ -11,7 +11,15 @@ public class Employee {
 
     private String name;
 
+    private Department department;
+
+
     public Employee() {
+    }
+
+    public Employee(String name, Department department) {
+        this.name = name;
+        this.department = department;
     }
 
     public Employee(String name) {
@@ -36,9 +44,19 @@ public class Employee {
         this.name = name;
     }
 
+    @ManyToOne
+    public Department getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(Department department) {
+        this.department = department;
+    }
+
     @Override
     public String toString() {
-        return "Employee [id=" + id + ", name=" + name + "]";
+        return "Employee [id=" + id + ", name=" + name + ", department="
+                + department.getName() + "]";
     }
 
 }
