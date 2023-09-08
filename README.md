@@ -10,8 +10,6 @@ namespace domain {
         # owner : Owner
         # age : int
     }
-
-
     class Owner {
         - id : Long
         - name : String
@@ -23,7 +21,7 @@ namespace domain {
         - name : String
         - appointment : List~Appointment~
     }
-Animal <|-- Cat
-Animal <|-- Dog
+    Animal <|-- Cat
+    Animal <|-- Dog
 }
 ```
