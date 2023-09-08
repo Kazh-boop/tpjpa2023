@@ -28,6 +28,6 @@ class Appointment {
 }
 Animal <|-- Cat
 Animal <|-- Dog
-Owner "1" \*-- "*" Animal
+Owner "1" *-- "*" Animal
 ```
 
