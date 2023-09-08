@@ -1,6 +1,7 @@
 # Template de projet pour le TP JPA 2021 UniR
 
 ```mermaid
+title: Diagramme UML du modèle de données
 classDiagram
 class Animal {
     <<abstract>>
