@@ -2,21 +2,23 @@
 
 ```mermaid
 classDiagram
-    class Animal* {
-        - id : Long
-        # name : String
-        # owner : Owner
-        # age : int
-    }
-    class Owner* {
-        - id : Long
-        - name : String
-        - animals : List~Animal~
-        - appointment : List~Appointment~
-    }
-    class Veterinarian {
-        - id : Long
-        - name : String
-        - appointment : List~Appointment~
-    }
+class Animal* {
+    - id : Long
+    # name : String
+    # owner : Owner
+    # age : int
+}
+class Owner {
+    - id : Long
+    - name : String
+    - animals : List~Animal~
+    - appointment : List~Appointment~
+}
+class Veterinarian {
+    - id : Long
+    - name : String
+    - appointment : List~Appointment~
+}
+Animal <|-- Cat
+Animal <|-- Dog
 ```
