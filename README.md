@@ -2,7 +2,7 @@
 
 ```mermaid
 classDiagram
-class Animal* {
+class Animal {
     - id : Long
     # name : String
     # owner : Owner
