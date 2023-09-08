@@ -3,6 +3,7 @@
 ```mermaid
 classDiagram
 class Animal {
+    <<abstract>>
     - id : Long
     # name : String
     # owner : Owner
