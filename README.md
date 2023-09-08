@@ -3,7 +3,6 @@
 ```mermaid
 classDiagram
 namespace domain {
-    namespace animals {
         class Animal {
             <<abstract>>
             - id : Long
@@ -11,8 +10,8 @@ namespace domain {
             # owner : Owner
             # age : int
         }
-    }
-    namespace persons {
+
+
         class Owner {
             - id : Long
             - name : String
@@ -24,7 +23,6 @@ namespace domain {
             - name : String
             - appointment : List~Appointment~
         }
-    }
     Animal <|-- Cat
     Animal <|-- Dog
 }
