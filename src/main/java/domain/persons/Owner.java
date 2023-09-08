@@ -1,4 +1,4 @@
-package domain.persons;
+package domain.person;
 
 import domain.Appointment;
 import domain.animals.Animal;
@@ -16,7 +16,7 @@ public class Owner {
 
     private List<Animal> animals = new ArrayList<Animal>();
 
-    private List<Appointment> meetings = new ArrayList<Appointment>();
+    private List<Appointment> appointments = new ArrayList<Appointment>();
 
     public Owner() {}
 
@@ -52,12 +52,12 @@ public class Owner {
     }
 
     @OneToMany(mappedBy = "owner", cascade = CascadeType.PERSIST)
-    public List<Appointment> getMeetings() {
-        return meetings;
+    public List<Appointment> getAppointments() {
+        return appointments;
     }
 
-    public void setMeetings(List<Appointment> meetings) {
-        this.meetings = meetings;
+    public void setAppointments(List<Appointment> appointments) {
+        this.appointments = appointments;
     }
 
     public String toString() {

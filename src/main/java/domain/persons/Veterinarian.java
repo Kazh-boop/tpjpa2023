@@ -1,4 +1,4 @@
-package domain.persons;
+package domain.person;
 
 import domain.Appointment;
 import jakarta.persistence.*;
@@ -12,7 +12,7 @@ public class Veterinarian {
 
     private String name;
 
-    private List<Appointment> meetings = new ArrayList<Appointment>();
+    private List<Appointment> appointments = new ArrayList<Appointment>();
 
     public Veterinarian() {
     }
@@ -47,11 +47,11 @@ public class Veterinarian {
 
 
     @OneToMany(mappedBy = "veterinarian", cascade = CascadeType.PERSIST)
-    public List<Appointment> getMeetings() {
-        return meetings;
+    public List<Appointment> getAppointments() {
+        return appointments;
     }
 
-    public void setMeetings(List<Appointment> meetings) {
-        this.meetings = meetings;
+    public void setAppointments(List<Appointment> appointments) {
+        this.appointments = appointments;
     }
 }
