@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
-public class Appointement {
+public class Appointment {
     private Long id;
 
     private Owner owner;
@@ -16,10 +16,10 @@ public class Appointement {
 
     private Timestamp timestamp;
 
-    public Appointement() {
+    public Appointment() {
     }
 
-    public Appointement(Owner owner, Veterinarian vet, Timestamp timestamp) {
+    public Appointment(Owner owner, Veterinarian vet, Timestamp timestamp) {
         this.owner = owner;
         this.veterinarian = vet;
         this.timestamp = timestamp;
