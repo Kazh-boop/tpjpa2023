@@ -51,11 +51,11 @@ public class JpaTest {
 			Owner eddy = new Owner("Eddy");
 
 			Animal kitty = new Cat("Kitty", eddy);
-			kitty.setRace("European");
+			kitty.setSpecies("European");
 			Animal newt = new Cat("Newt", baptiste);
-			newt.setRace("European");
+			newt.setSpecies("European");
 			Animal pharos = new Dog("Pharos", baptiste);
-			pharos.setRace("Staff");
+			pharos.setSpecies("Staff");
 
 			manager.persist(baptiste);
 			manager.persist(eddy);

@@ -12,7 +12,7 @@ public abstract class Animal {
 
     protected Owner owner;
 
-    protected String race;
+    protected String species;
 
     @Id
     @GeneratedValue
@@ -42,12 +42,12 @@ public abstract class Animal {
     }
 
     @Transient
-    public String getRace() {
-        return race;
+    public String getSpecies() {
+        return species;
     }
 
-    public void setRace(String race) {
-        this.race = race;
+    public void setSpecies(String species) {
+        this.species = species;
     }
 
     public String toString() {
