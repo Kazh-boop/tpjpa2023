@@ -1,6 +1,6 @@
 package jpa;
 
-import domain.Meeting;
+import domain.Appointement;
 import domain.animals.Animal;
 import domain.animals.Cat;
 import domain.animals.Dog;
@@ -67,8 +67,8 @@ public class JpaTest {
 			Veterinarian vet = new Veterinarian("Dr. House");
 			manager.persist(vet);
 
-			Meeting meetingBaptiste = new Meeting(baptiste, vet, new Timestamp(2023-1900, 10-1, 5, 14, 0, 0, 0));
-			Meeting meetingEddy = new Meeting(eddy, vet, new Timestamp(2023-1900, 10-1, 5, 15, 0, 0, 0));
+			Appointement meetingBaptiste = new Appointement(baptiste, vet, new Timestamp(2023-1900, 10-1, 5, 14, 0, 0, 0));
+			Appointement meetingEddy = new Appointement(eddy, vet, new Timestamp(2023-1900, 10-1, 5, 15, 0, 0, 0));
 			manager.persist(meetingBaptiste);
 			manager.persist(meetingEddy);
 		}
@@ -88,23 +88,23 @@ public class JpaTest {
 	}
 
 	public void listMeetings() {
-		manager.createQuery("Select m From Meeting m", Meeting.class).getResultList().forEach(System.out::println);
+		manager.createQuery("Select m From Appointement m", Appointement.class).getResultList().forEach(System.out::println);
 	}
 
 	public void listMeetingsByVet(String vetName) {
-		List<Meeting> resultList = manager.createQuery("Select m From Meeting m where m.veterinarian.name = :vetName", Meeting.class)
+		List<Appointement> resultList = manager.createQuery("Select m From Appointement m where m.veterinarian.name = :vetName", Appointement.class)
 				.setParameter("vetName", vetName).getResultList();
 		System.out.println("Veterinarian : " + vetName + " has " + resultList.size() + " meetings : ");
-		for (Meeting meeting : resultList) {
+		for (Appointement meeting : resultList) {
 			System.out.println(meeting);
 		}
 	}
 
 	public void listMeetingsByOwner(String ownerName) {
-		List<Meeting> resultList = manager.createQuery("Select m From Meeting m where m.owner.name = :ownerName", Meeting.class)
+		List<Appointement> resultList = manager.createQuery("Select m From Appointement m where m.owner.name = :ownerName", Appointement.class)
 				.setParameter("ownerName", ownerName).getResultList();
 		System.out.println("Owner : " + ownerName + " has " + resultList.size() + " meetings : ");
-		for (Meeting meeting : resultList) {
+		for (Appointement meeting : resultList) {
 			System.out.println(meeting);
 		}
 	}

@@ -1,12 +1,10 @@
 package domain.persons;
 
-import domain.Meeting;
+import domain.Appointement;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static jakarta.persistence.CascadeType.PERSIST;
 
 @Entity
 public class Veterinarian {
@@ -14,7 +12,7 @@ public class Veterinarian {
 
     private String name;
 
-    private List<Meeting> meetings = new ArrayList<Meeting>();
+    private List<Appointement> meetings = new ArrayList<Appointement>();
 
     public Veterinarian() {
     }
@@ -49,11 +47,11 @@ public class Veterinarian {
 
 
     @OneToMany(mappedBy = "veterinarian", cascade = CascadeType.PERSIST)
-    public List<Meeting> getMeetings() {
+    public List<Appointement> getMeetings() {
         return meetings;
     }
 
-    public void setMeetings(List<Meeting> meetings) {
+    public void setMeetings(List<Appointement> meetings) {
         this.meetings = meetings;
     }
 }
