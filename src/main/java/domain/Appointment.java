@@ -14,15 +14,15 @@ public class Appointment {
 
     private Veterinarian veterinarian;
 
-    private Timestamp timestamp;
+    private Timestamp startTime;
 
     public Appointment() {
     }
 
-    public Appointment(Owner owner, Veterinarian vet, Timestamp timestamp) {
+    public Appointment(Owner owner, Veterinarian vet, Timestamp startTime) {
         this.owner = owner;
         this.veterinarian = vet;
-        this.timestamp = timestamp;
+        this.startTime = startTime;
     }
 
     public void setId(Long id) {
@@ -54,15 +54,15 @@ public class Appointment {
     }
 
     @Temporal(TemporalType.TIMESTAMP)
-    public Timestamp getTimestamp() {
-        return timestamp;
+    public Timestamp getStartTime() {
+        return startTime;
     }
 
-    public void setTimestamp(Timestamp timestamp) {
-        this.timestamp = timestamp;
+    public void setStartTime(Timestamp timestamp) {
+        this.startTime = timestamp;
     }
 
     public String toString() {
-        return "Meeting between " + owner.getName() + " and " + veterinarian.getName() + " at " + timestamp;
+        return "Meeting between " + owner.getName() + " and " + veterinarian.getName() + " at " + startTime;
     }
 }

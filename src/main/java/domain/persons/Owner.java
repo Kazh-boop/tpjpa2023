@@ -1,4 +1,4 @@
-package domain.person;
+package domain.persons;
 
 import domain.Appointment;
 import domain.animals.Animal;
@@ -58,6 +58,10 @@ public class Owner {
 
     public void setAppointments(List<Appointment> appointments) {
         this.appointments = appointments;
+    }
+
+    public void addAnimal(Animal animal) {
+        this.animals.add(animal);
     }
 
     public String toString() {

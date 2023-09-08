@@ -64,6 +64,6 @@ public abstract class Animal {
     }
 
     public String toString() {
-        return "Animal name : " + this.name;
+        return this.name + "is " + this.age + " years old " + getClass().getSimpleName().toLowerCase();
     }
 }

@@ -1,4 +1,4 @@
-package domain.person;
+package domain.persons;
 
 import domain.Appointment;
 import jakarta.persistence.*;
@@ -43,8 +43,6 @@ public class Veterinarian {
     public void setName(String name) {
         this.name = name;
     }
-
-
 
     @OneToMany(mappedBy = "veterinarian", cascade = CascadeType.PERSIST)
     public List<Appointment> getAppointments() {
