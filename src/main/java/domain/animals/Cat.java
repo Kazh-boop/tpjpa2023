@@ -9,12 +9,11 @@ public class Cat extends Animal {
     public Cat() {
     }
 
-    public Cat(String name, Owner owner) {
-        this.name = name;
-        this.owner = owner;
+    public Cat(String name, int age, Owner owner) {
+        super(name, age, owner);
     }
 
-    public Cat(String name) {
-        this.name = name;
+    public Cat(String name, int age) {
+        super(name, age);
     }
 }

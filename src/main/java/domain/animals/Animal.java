@@ -10,9 +10,23 @@ public abstract class Animal {
 
     protected String name;
 
+    protected int age;
+
     protected Owner owner;
 
-    protected String species;
+    public Animal() {
+    }
+
+    protected Animal(String name, int age, Owner owner) {
+        this.name = name;
+        this.age = age;
+        this.owner = owner;
+    }
+
+    protected Animal(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
 
     @Id
     @GeneratedValue
@@ -32,6 +46,14 @@ public abstract class Animal {
         this.name = name;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     @ManyToOne
     public Owner getOwner() {
         return owner;
@@ -39,15 +61,6 @@ public abstract class Animal {
 
     public void setOwner(Owner owner) {
         this.owner = owner;
-    }
-
-    @Transient
-    public String getSpecies() {
-        return species;
-    }
-
-    public void setSpecies(String species) {
-        this.species = species;
     }
 
     public String toString() {
