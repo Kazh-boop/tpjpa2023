@@ -35,4 +35,5 @@ Owner "1" *-- "*" Animal
 Owner "1" *-- "*" Appointment
 Veterinarian "1" *-- "*" Appointment
 ```
-
+lazyload : plein de requêtes
+fetch : une grosse requête mais garde les infos qu'on veut en mémoire
